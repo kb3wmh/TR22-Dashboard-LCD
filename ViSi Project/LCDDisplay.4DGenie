@@ -71,11 +71,11 @@ Gauge
     Minvalue                     0
     Orientation                  Horizontal
     Palette1.High                clLime
-    Palette1.Low                 0x005100
+    Palette1.Low                 BLACK
     Palette2.High                clYellow
-    Palette2.Low                 0x005151
+    Palette2.Low                 BLACK
     Palette3.High                clRed
-    Palette3.Low                 0x000051
+    Palette3.Low                 BLACK
     Percent1                     60
     Percent2                     25
     Spacing                      0
@@ -122,7 +122,7 @@ LedDigits
     Left                         688
     OutlineColor                 BLACK
     Palette.High                 clYellow
-    Palette.Low                  0x003E3F
+    Palette.Low                  BLACK
     Top                          160
     Width                        102
     OnChanged                    ''
@@ -141,7 +141,7 @@ LedDigits
     Left                         688
     OutlineColor                 BLACK
     Palette.High                 clYellow
-    Palette.Low                  0x003E3F
+    Palette.Low                  BLACK
     Top                          235
     Width                        102
     OnChanged                    ''
@@ -153,14 +153,14 @@ LedDigits
     Name                         Leddigits2
     Alias                        Leddigits2
     Color                        BLACK
-    Decimals                     1
+    Decimals                     0
     Digits                       3
     Height                       50
     LeadingZero                  Yes
     Left                         688
     OutlineColor                 BLACK
     Palette.High                 clYellow
-    Palette.Low                  0x003E3F
+    Palette.Low                  BLACK
     Top                          310
     Width                        102
     OnChanged                    ''
@@ -179,7 +179,7 @@ LedDigits
     Left                         296
     OutlineColor                 BLACK
     Palette.High                 clYellow
-    Palette.Low                  0x003E3F
+    Palette.Low                  BLACK
     Top                          84
     Width                        225
     OnChanged                    ''
@@ -270,8 +270,8 @@ UserLed
     OutlineColor                 BLACK
     OutlineWidth                 0
     PaletteEx.High1              clRed
-    PaletteEx.High2              BLACK
-    PaletteEx.Low1               0x000049
+    PaletteEx.High2              clRed
+    PaletteEx.Low1               BLACK
     PaletteEx.Low2               BLACK
     Top                          160
     Width                        100
@@ -303,8 +303,8 @@ UserLed
     OutlineColor                 BLACK
     OutlineWidth                 0
     PaletteEx.High1              clRed
-    PaletteEx.High2              BLACK
-    PaletteEx.Low1               0x000051
+    PaletteEx.High2              clRed
+    PaletteEx.Low1               BLACK
     PaletteEx.Low2               BLACK
     Top                          235
     Width                        100
@@ -337,7 +337,7 @@ UserLed
     OutlineWidth                 0
     PaletteEx.High1              clBlue
     PaletteEx.High2              clBlue
-    PaletteEx.Low1               0x340000
+    PaletteEx.Low1               BLACK
     PaletteEx.Low2               BLACK
     Top                          310
     Width                        100
