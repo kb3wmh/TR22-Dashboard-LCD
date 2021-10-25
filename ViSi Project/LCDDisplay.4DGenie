@@ -5,7 +5,7 @@ Depends
 end
 Options
     Genie
-    Speed                        9600
+    Speed                        115200
     Checksum                     No
     ResponseSize                 2
     Multidrop                    No
@@ -16,7 +16,7 @@ Options
     ButtonDisable                No
     SignedDigits                 No
     MaxString                    75
-    ComPort                      0
+    ComPort                      1
     ComTX1pinIdx                 0
     ComRX1pinIdx                 0
     FileSystem                   FATfs

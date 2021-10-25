@@ -5755,7 +5755,7 @@ file C:\Program Files (x86)\4D Labs\4D Workshop 4 IDE\include\Diablo16_Functions
 005749  000003  //#constant OLDCOMPILE
 005750  000004        
 005751  000005        
-005752  000006  // generated 10/16/2021 11:12:15 AM
+005752  000006  // generated 10/23/2021 11:38:36 AM
 005753  000007  // uSDRequired:- 1   InternalRequired:- InternalRequired
 005754  000008        
 005755  000009  #MODE FLASHBANK_0
@@ -5795,7 +5795,7 @@ file C:\Users\charl\Documents\TR22-Dashboard-LCD\ViSi Project\LCDDisplay.4DWork\
 
 005784  000016  #inherit "LCDDisplayConst.inc"
 005785  000016  #inherit "LCDDisplayConst.inc"
-005786  000001  // File generated 10/16/2021 11:12:10 AM
+005786  000001  // File generated 10/23/2021 11:38:27 AM
 005787  000002  // Warning! This is a generated file, any manual changes will be
 005788  000003  // lost during the next generation.
 005789  000004        
