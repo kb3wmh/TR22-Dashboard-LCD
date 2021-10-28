@@ -1,4 +1,4 @@
-// File generated 10/23/2021 11:38:27 AM
+// File generated 10/27/2021 7:02:46 PM
 // Warning! This is a generated file, any manual changes will be
 // lost during the next generation.
 
@@ -26,6 +26,10 @@
     iStatictext4    // offset 0xA12C00
     iStatictext5    // offset 0xA14000
     iUserbutton0    // offset 0xA15C00
+    iStatictext6    // offset 0xA37400
+    iWinbutton0     // offset 0xA39200
+    iStatictext7    // offset 0xA3E800
+    iImage0         // offset 0xA51600
 #END
 
 
