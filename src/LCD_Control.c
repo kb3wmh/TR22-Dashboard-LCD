@@ -108,6 +108,6 @@ int main() {
     set_oil_warn(oil_warn);
     set_slip(slip);
 
-    usleep(10000)
+    usleep(10000);
   }
 }
