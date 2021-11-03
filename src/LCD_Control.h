@@ -4,7 +4,8 @@
 #include <stdint.h>
 
 // Display parameters
-#define SERIAL_BAUDRATE 9600
+#define SERIAL_BAUDRATE 115200
+#define SERIAL_PORT "/dev/ttyUSB0"
 
 // Display object indices
 #define TACHOMETER_GAUGE 0

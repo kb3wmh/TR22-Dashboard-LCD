@@ -3,7 +3,7 @@
 #include <string.h>
 #include <errno.h>
 #include <math.h>
-#include <time.h>
+#include <sys/time.h>
 #include <stdbool.h>
 
 #include <geniePi.h>
@@ -14,7 +14,7 @@
 // Returns false if display does not initialize correctly
 bool init_display() {
 
-  if (genieSetup("/dev/ttyS0", SERIAL_BAUDRATE) < 0) {
+  if (genieSetup(SERIAL_PORT, SERIAL_BAUDRATE) < 0) {
     fprintf (stderr, "rgb: Can't initialize Genie Display: %s\n", strerror(errno));
     return false;
   }
@@ -23,7 +23,6 @@ bool init_display() {
 }
 
 void set_rpm(uint16_t rpm) {
-  //genieWriteShortToIntLedDigits(RPM_DIGITS, (int16_t) rpm);
   genieWriteObj(GENIE_OBJ_LED_DIGITS, RPM_DIGITS, rpm);
 }
 
@@ -32,6 +31,19 @@ void set_tach(uint16_t rpm) {
 
   if (rpm > TACH_MIN_RPM) {
     gaugePercent = (TACH_MAX * (rpm - TACH_MIN_RPM)) / (REDLINE - TACH_MIN_RPM);
+    
+    if (rpm > SHIFT_POINT) {
+      struct timeval current_time;
+      gettimeofday(&current_time, NULL);
+
+      suseconds_t milliseconds = current_time.tv_usec / 1000;
+
+      // First half of every second, allow gauge to be on, otherwise force it off
+      int16_t blink = (milliseconds % 1000) < 500 ? 0 : 1;
+      gaugePercent = gaugePercent * blink;
+      
+    }
+    
     genieWriteObj(GENIE_OBJ_GAUGE, TACHOMETER_GAUGE, gaugePercent);
   }
 }
@@ -78,7 +90,7 @@ int main() {
   }
 
   printf("Initialized Display\n");
-  uint16_t rpm = 12500;
+  uint16_t rpm = 8000;
   uint16_t temp = 225;
   uint16_t volt = 125;
   uint16_t tps = 78;
@@ -86,12 +98,16 @@ int main() {
   bool oil_warn = false;
   bool slip = false;
 
-  set_rpm(rpm);
-  set_tach(rpm);
-  set_temp(temp);
-  set_gear(gear);
-  set_volt(volt);
-  set_TPS(tps);
-  set_oil_warn(oil_warn);
-  set_slip(slip);
+  for (;;) {
+    set_rpm(rpm);
+    set_tach(rpm);
+    set_temp(temp);
+    set_gear(gear);
+    set_volt(volt);
+    set_TPS(tps);
+    set_oil_warn(oil_warn);
+    set_slip(slip);
+
+    usleep(10000)
+  }
 }
