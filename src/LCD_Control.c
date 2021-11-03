@@ -20,6 +20,8 @@ bool init_display() {
     return false;
   }
 
+  genieWriteObj(GENIE_OBJ_FORM, DEFAULT_PAGE, 0);
+  
   return true;
 }
 

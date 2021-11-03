@@ -20,6 +20,7 @@
 #define SLIP_LED 2
 
 #define GEAR_STRING 0
+#define DEFAULT_PAGE 0
 
 // Useful LCD Constants
 #define TACH_MAX 100
