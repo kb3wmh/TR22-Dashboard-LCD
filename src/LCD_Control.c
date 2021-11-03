@@ -5,6 +5,7 @@
 #include <math.h>
 #include <sys/time.h>
 #include <stdbool.h>
+#include <unistd.h>
 
 #include <geniePi.h>
 
