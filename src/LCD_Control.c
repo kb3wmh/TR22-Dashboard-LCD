@@ -42,7 +42,7 @@ void set_tach(uint16_t rpm) {
       suseconds_t milliseconds = current_time.tv_usec / 1000;
 
       // First half of every second, allow gauge to be on, otherwise force it off
-      int16_t blink = (milliseconds % 1000) < 500 ? 0 : 1;
+      int16_t blink = (milliseconds % BLINK_RATE) < (BLINK_RATE / 2) ? 0 : 1;
       gaugePercent = gaugePercent * blink;
       
     }

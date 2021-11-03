@@ -25,6 +25,7 @@
 // Useful LCD Constants
 #define TACH_MAX 100
 #define TACH_MIN 0
+#define BLINK_RATE 500
 
 // LCD Control Functions
 bool init_display();
