@@ -93,19 +93,21 @@ int main() {
   }
 
   printf("Initialized Display\n");
-  uint16_t rpm = 8000;
+  uint16_t rpm = 12500;
   uint16_t temp = 225;
   uint16_t volt = 125;
   uint16_t tps = 78;
-  uint8_t gear = 6;
+  uint8_t gear = 0;
   bool oil_warn = false;
   bool slip = false;
 
+  set_gear(gear);
+
+  
   for (;;) {
     set_rpm(rpm);
     set_tach(rpm);
     set_temp(temp);
-    set_gear(gear);
     set_volt(volt);
     set_TPS(tps);
     set_oil_warn(oil_warn);
