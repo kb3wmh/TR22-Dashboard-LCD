@@ -51,7 +51,7 @@ void set_tach(uint16_t rpm) {
   }
 }
 
-void set_temp(uint16_t temp) {
+void set_temp(int16_t temp) {
   genieWriteObj(GENIE_OBJ_LED_DIGITS, TEMP_DIGITS, temp);
 
   if (temp >= TEMP_ALARM_ON) {
@@ -77,10 +77,12 @@ void set_gear(uint8_t gear) {
   genieWriteStr(GEAR_STRING, gears[gear]);
 }
 
+// TODO: determine oil pressure CAN message
 void set_oil_warn(bool status) {
   genieWriteObj(GENIE_OBJ_USER_LED, OIL_LED, status);
 }
 
+// TODO: determine slip cutoff
 void set_slip(bool status) {
   genieWriteObj(GENIE_OBJ_USER_LED, SLIP_LED, status);
 }
