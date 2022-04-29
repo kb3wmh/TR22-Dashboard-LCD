@@ -2,6 +2,7 @@
 #define LCD_CONTROL_H
 
 #include <stdint.h>
+#include <stdbool.h>
 
 // Display parameters
 #define SERIAL_BAUDRATE 115200

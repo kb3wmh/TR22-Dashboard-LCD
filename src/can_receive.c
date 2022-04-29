@@ -5,6 +5,13 @@
 #include <linux/can.h>
 #include <linux/can/raw.h>
 
+#include <string.h>
+
+#include<stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+
 #include "LCD_Main.h"
 #include "can_receive.h"
 
@@ -25,15 +32,18 @@ void can_init() {
   bind(s, (struct sockaddr *)&addr, sizeof(addr));
 }
 
-int receive_messages(struct can_frame *frame) {
-  // Read next CAN frame
-  nbytes = read(s, frame, sizeof(struct can_frame));
+int receive_messages(cframe* frame) {
 
+  // Read next CAN frame
+  int nbytes = read(s, frame, sizeof(struct can_frame));
+  
   if (nbytes < 0) {
     perror("can raw socket read");
     return 1;
   }
 
+  //printf("%X\n", ((struct can_frame *)frame)->can_id);
+  
   if (nbytes < sizeof(struct can_frame)) {
     fprintf(stderr, "read: incomplete CAN frame\n");
     return 1;

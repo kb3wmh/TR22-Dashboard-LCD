@@ -1,7 +1,9 @@
 #ifndef CAN_RECEIVE_H
 #define CAN_RECEIVE_H
 
+typedef struct can_frame cframe;
+
 void can_init();
-void receive_messages(struct can_frame *frame);
+int receive_messages(cframe *frame);
 
 #endif

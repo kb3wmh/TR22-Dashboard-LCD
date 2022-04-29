@@ -51,7 +51,7 @@ void set_tach(uint16_t rpm) {
   }
 }
 
-void set_temp(int16_t temp) {
+void set_temp(uint16_t temp) {
   genieWriteObj(GENIE_OBJ_LED_DIGITS, TEMP_DIGITS, temp);
 
   if (temp >= TEMP_ALARM_ON) {
@@ -87,34 +87,34 @@ void set_slip(bool status) {
   genieWriteObj(GENIE_OBJ_USER_LED, SLIP_LED, status);
 }
 
-int main() {
-  // Try to initialize display, quit if error
-  printf("Starting\n");
-  if (!init_display()) {
-    return 1;
-  }
+/* int main() { */
+/*   // Try to initialize display, quit if error */
+/*   printf("Starting\n"); */
+/*   if (!init_display()) { */
+/*     return 1; */
+/*   } */
 
-  printf("Initialized Display\n");
-  uint16_t rpm = 12500;
-  uint16_t temp = 225;
-  uint16_t volt = 125;
-  uint16_t tps = 78;
-  uint8_t gear = 0;
-  bool oil_warn = false;
-  bool slip = false;
+/*   printf("Initialized Display\n"); */
+/*   uint16_t rpm = 12500; */
+/*   uint16_t temp = 225; */
+/*   uint16_t volt = 125; */
+/*   uint16_t tps = 78; */
+/*   uint8_t gear = 0; */
+/*   bool oil_warn = false; */
+/*   bool slip = false; */
 
-  set_gear(gear);
+/*   set_gear(gear); */
 
   
-  for (;;) {
-    set_rpm(rpm);
-    set_tach(rpm);
-    set_temp(temp);
-    set_volt(volt);
-    set_TPS(tps);
-    set_oil_warn(oil_warn);
-    set_slip(slip);
+/*   for (;;) { */
+/*     set_rpm(rpm); */
+/*     set_tach(rpm); */
+/*     set_temp(temp); */
+/*     set_volt(volt); */
+/*     set_TPS(tps); */
+/*     set_oil_warn(oil_warn); */
+/*     set_slip(slip); */
 
-    usleep(10000);
-  }
-}
+/*     usleep(10000); */
+/*   } */
+/* } */

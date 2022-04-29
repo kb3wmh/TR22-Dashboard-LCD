@@ -1,10 +1,12 @@
 #include "LCD_Main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
-#include <can_receive.h>
+#include "can_receive.h"
 #include <linux/can.h>
 
 #include "handlers.h"
+#include "LCD_Control.h"
 
 // Initialize the data fields for each of the CAN handlers
 
@@ -14,8 +16,10 @@ void setup() {
 }
 
 void loop() {
-  struct can_frame frame;
+  cframe frame;
 
+  printf("Test\n");
+  
   for (;;) {
     if (receive_messages(&frame) != 0) {
       printf("Error receiving message!\n");
@@ -27,7 +31,7 @@ void loop() {
 }
 
 
-int main(int argc, char **argv) {
+int main() {
   setup();
   loop();
 }

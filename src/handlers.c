@@ -5,7 +5,7 @@
 
 // All of these functions assume display has been initialized.
 void process_can_frame(struct can_frame *frame) {
-  switch(frame->can_id) {
+  switch(frame->can_id & 0xFFFFFFF) {
   case PE1_CAN_ID:
     pe1_handler(frame->data);
     break;
@@ -92,8 +92,8 @@ void pe5_handler(void *data) {
 void pe6_handler(void *data) {
   PE6_CAN *pe6_data = (PE6_CAN *) data;
 
-  set_temp(pe6_data->coolantTemp_f);
-  set_volt(pe6_data->battery_volts);
+  set_temp(pe6_data->coolantTemp_f/10);
+  set_volt(pe6_data->battery_volts/10);
 }
 
 
