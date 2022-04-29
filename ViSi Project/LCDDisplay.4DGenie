@@ -25,7 +25,7 @@ Options
     SPIsdo                       3
     SPIsdi                       2
     SPIsck                       1
-    FlashGT16MB                  No
+    FlashForceLT16MB             No
 end
 Form
     Name                         Form0
@@ -134,7 +134,7 @@ LedDigits
     Name                         Leddigits1
     Alias                        Leddigits1
     Color                        BLACK
-    Decimals                     1
+    Decimals                     0
     Digits                       3
     Height                       50
     LeadingZero                  Yes
@@ -192,7 +192,7 @@ StaticText
     Alias                        Statictext0
     Alignment                    Left
     AutoSize                     Yes
-    Caption                      VOLT
+    Caption                      'OIL T'
     Color                        BLACK
     Font.Color                   WHITE
     Font.Effects                 []
@@ -203,7 +203,7 @@ StaticText
     Left                         569
     Top                          239
     Transparent                  Yes
-    Width                        95
+    Width                        90
     WordWrap                     Yes
 end
 StaticText
@@ -211,7 +211,7 @@ StaticText
     Alias                        Statictext1
     Alignment                    Left
     AutoSize                     Yes
-    Caption                      TPS
+    Caption                      PRESS
     Color                        BLACK
     Font.Color                   WHITE
     Font.Effects                 []
@@ -219,10 +219,10 @@ StaticText
     Font.Size                    28
     Font.Style                   []
     Height                       42
-    Left                         591
-    Top                          314
+    Left                         540
+    Top                          312
     Transparent                  Yes
-    Width                        73
+    Width                        127
     WordWrap                     Yes
 end
 StaticText
@@ -230,18 +230,18 @@ StaticText
     Alias                        Statictext2
     Alignment                    Left
     AutoSize                     Yes
-    Caption                      TEMP
+    Caption                      'COOL T'
     Color                        BLACK
     Font.Color                   WHITE
     Font.Effects                 []
     Font.Name                    Arial
     Font.Size                    28
     Font.Style                   []
-    Height                       42
-    Left                         560
-    Top                          164
+    Height                       50
+    Left                         523
+    Top                          163
     Transparent                  Yes
-    Width                        104
+    Width                        140
     WordWrap                     Yes
 end
 UserLed
@@ -446,7 +446,7 @@ StaticText
     Left                         10
     Top                          10
     Transparent                  Yes
-    Width                        124
+    Width                        150
     WordWrap                     Yes
 end
 WinButton

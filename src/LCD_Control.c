@@ -25,6 +25,10 @@ bool init_display() {
   return true;
 }
 
+int get_page() {
+  int page = genieReadObj(GENIE_OBJ_FORM, 
+}
+
 void set_rpm(uint16_t rpm) {
   genieWriteObj(GENIE_OBJ_LED_DIGITS, RPM_DIGITS, rpm);
 }
@@ -52,7 +56,7 @@ void set_tach(uint16_t rpm) {
 }
 
 void set_temp(uint16_t temp) {
-  genieWriteObj(GENIE_OBJ_LED_DIGITS, TEMP_DIGITS, temp);
+  genieWriteObj(GENIE_OBJ_LED_DIGITS, COOLANT_TEMP_DIGITS, temp);
 
   if (temp >= TEMP_ALARM_ON) {
     genieWriteObj(GENIE_OBJ_USER_LED, TEMP_LED, 1);
@@ -63,12 +67,30 @@ void set_temp(uint16_t temp) {
   }
 }
 
+void set_oil_temp(int16_t sensorvolts) {
+  // TODO: Determine calibration at different temps
+}
+
+void set_oil_pressure(int16_t sensorvolts) {
+  double pressure = ((sensorvolts * 0.001) - 0.5)*37.0/1.55;
+
+  genieWriteObj(GENIE_OBJ_LED_DIGITS, OIL_PRESSURE_DIGITS, (uint16_t) pressure);
+
+  if (pressure < 10.0) {
+    set_oil_warn(true);
+  }
+
+  else {
+    set_oil_warn(false);
+  }
+}
+
 void set_volt(uint16_t volt) {
-  genieWriteObj(GENIE_OBJ_LED_DIGITS, VOLTAGE_DIGITS, volt);
+  //genieWriteObj(GENIE_OBJ_LED_DIGITS, VOLTAGE_DIGITS, volt);
 }
 
 void set_TPS(uint16_t tps) {
-  genieWriteObj(GENIE_OBJ_LED_DIGITS, TPS_DIGITS, tps);
+  //genieWriteObj(GENIE_OBJ_LED_DIGITS, TPS_DIGITS, tps);
 }
 
 void set_gear(uint8_t gear) {
