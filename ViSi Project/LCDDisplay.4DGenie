@@ -230,18 +230,18 @@ StaticText
     Alias                        Statictext2
     Alignment                    Left
     AutoSize                     Yes
-    Caption                      'COOL T'
+    Caption                      WATER
     Color                        BLACK
     Font.Color                   WHITE
     Font.Effects                 []
     Font.Name                    Arial
     Font.Size                    28
     Font.Style                   []
-    Height                       50
+    Height                       42
     Left                         523
     Top                          163
     Transparent                  Yes
-    Width                        140
+    Width                        134
     WordWrap                     Yes
 end
 UserLed

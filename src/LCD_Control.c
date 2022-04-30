@@ -12,6 +12,9 @@
 #include "LCD_Control.h"
 #include "car_consts.h"
 
+// Old RPM state used to limit rate of updates to RPM
+uint16_t rpm_old;
+
 // Returns false if display does not initialize correctly
 bool init_display() {
 
@@ -21,6 +24,8 @@ bool init_display() {
   }
 
   genieWriteObj(GENIE_OBJ_FORM, DEFAULT_PAGE, 0);
+
+  rpm_old = 0;
   
   return true;
 }
@@ -30,7 +35,10 @@ int get_page() {
 }
 
 void set_rpm(uint16_t rpm) {
-  genieWriteObj(GENIE_OBJ_LED_DIGITS, RPM_DIGITS, rpm);
+    // Round RPM to the nearest 50
+    rpm = rpm - (rpm % RPM_DISPLAY_ROUND);
+
+    genieWriteObj(GENIE_OBJ_LED_DIGITS, RPM_DIGITS, rpm);
 }
 
 void set_tach(uint16_t rpm) {
@@ -48,10 +56,16 @@ void set_tach(uint16_t rpm) {
       // First half of every second, allow gauge to be on, otherwise force it off
       int16_t blink = (milliseconds % BLINK_RATE) < (BLINK_RATE / 2) ? 0 : 1;
       gaugePercent = gaugePercent * blink;
-      
+
+      genieWriteObj(GENIE_OBJ_GAUGE, TACHOMETER_GAUGE, gaugePercent);
+    }
+
+    // Only update tachometer if RPM has changed by more than 250 RPM
+    else if (abs(rpm - rpm_old) > TACH_RPM_FILTER) {
+      rpm_old = rpm;
+      genieWriteObj(GENIE_OBJ_GAUGE, TACHOMETER_GAUGE, gaugePercent);
     }
     
-    genieWriteObj(GENIE_OBJ_GAUGE, TACHOMETER_GAUGE, gaugePercent);
   }
 }
 
@@ -67,8 +81,9 @@ void set_temp(uint16_t temp) {
   }
 }
 
-void set_oil_temp(int16_t sensorvolts) {
+void set_oil_temp(int16_t temp) {
   // TODO: Determine calibration at different temps
+  genieWriteObj(GENIE_OBJ_LED_DIGITS, OIL_TEMP_DIGITS, temp * 0.1);
 }
 
 void set_oil_pressure(int16_t sensorvolts) {

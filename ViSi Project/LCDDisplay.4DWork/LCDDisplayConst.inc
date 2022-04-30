@@ -1,4 +1,4 @@
-// File generated 4/29/2022 5:19:10 PM
+// File generated 4/29/2022 10:35:15 PM
 // Warning! This is a generated file, any manual changes will be
 // lost during the next generation.
 
@@ -19,17 +19,17 @@
     iStatictext0    // offset 0x9FBC00
     iStatictext1    // offset 0x9FDA00
     iStatictext2    // offset 0xA00400
-    iUserled0       // offset 0xA03C00
-    iUserled1       // offset 0xA08C00
-    iUserled2       // offset 0xA0DC00
-    iStatictext3    // offset 0xA12C00
-    iStatictext4    // offset 0xA15000
-    iStatictext5    // offset 0xA16400
-    iUserbutton0    // offset 0xA18000
-    iStatictext6    // offset 0xA39800
-    iWinbutton0     // offset 0xA3B600
-    iStatictext7    // offset 0xA40C00
-    iImage0         // offset 0xA53A00
+    iUserled0       // offset 0xA03000
+    iUserled1       // offset 0xA08000
+    iUserled2       // offset 0xA0D000
+    iStatictext3    // offset 0xA12000
+    iStatictext4    // offset 0xA14400
+    iStatictext5    // offset 0xA15800
+    iUserbutton0    // offset 0xA17400
+    iStatictext6    // offset 0xA38C00
+    iWinbutton0     // offset 0xA3AA00
+    iStatictext7    // offset 0xA40000
+    iImage0         // offset 0xA52E00
 #END
 
 

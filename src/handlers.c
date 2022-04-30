@@ -83,7 +83,6 @@ void pe4_handler(void *data) {
   PE4_CAN *pe4_data = (PE4_CAN *) data;
 
   set_oil_pressure(pe4_data->analogInput6_volts);
-  set_oil_temp(pe4_data->analogInput7_volts);
 }
 
 
@@ -102,6 +101,8 @@ void pe6_handler(void *data) {
 
 void pe7_handler(void *data) {
   PE7_CAN *pe7_data = (PE7_CAN *) data;
+
+  set_oil_temp(pe7_data->analogInput7_f);
 }
 
 
