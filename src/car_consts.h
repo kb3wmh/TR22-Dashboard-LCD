@@ -2,7 +2,7 @@
 #define CAR_CONSTS_H
 
 #define REDLINE 12800
-#define TACH_MIN_RPM 3000
+#define TACH_MIN_RPM 1000
 #define SHIFT_POINT 12000
 
 #define TEMP_ALARM_ON 220

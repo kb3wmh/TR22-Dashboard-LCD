@@ -56,10 +56,15 @@ void set_tach(uint16_t rpm) {
       genieWriteObj(GENIE_OBJ_GAUGE, TACHOMETER_GAUGE, gaugePercent);
     }
 
-    // Only update tachometer if RPM has changed by more than 250 RPM
+    // Only update tachometer if RPM has changed by more than 125 RPM
     else if (abs(rpm - rpm_old) > TACH_RPM_FILTER) {
       rpm_old = rpm;
       genieWriteObj(GENIE_OBJ_GAUGE, TACHOMETER_GAUGE, gaugePercent);
+    }
+
+    else if (rpm == 0) {
+      rpm_old = rpm;
+      genieWriteObj(GENIE_OBJ_GAUGE, TACHOMETER_GAUGE, 0);
     }
     
   }
