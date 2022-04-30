@@ -72,14 +72,14 @@ void pe1_handler(void *data) {
 void pe2_handler(void *data){
   PE2_CAN *pe2_data = (PE2_CAN *) data;
 
-  (void) data;
+  (void) pe2_data;
 }
 
 
 void pe3_handler(void *data) {
   PE3_CAN *pe3_data = (PE3_CAN *) data;
 
-  (void) data;
+  (void) pe3_data;
 }
 
 
@@ -93,7 +93,7 @@ void pe4_handler(void *data) {
 void pe5_handler(void *data) {
   PE5_CAN *pe5_data = (PE5_CAN *) data;
 
-  (void) data;
+  (void) pe5_data;
 }
 
 
@@ -113,63 +113,63 @@ void pe7_handler(void *data) {
 
 
 void pe8_handler(void *data) {
-  PE8_CAN *pe8_can = (PE8_CAN *) data;
+  PE8_CAN *pe8_data = (PE8_CAN *) data;
 
-  (void) data;
+  (void) pe8_data;
 }
 
 
 void pe9_handler(void *data) {
-  PE9_CAN *pe9_can = (PE9_CAN *) data;
+  PE9_CAN *pe9_data = (PE9_CAN *) data;
 
-  (void) data;
+  (void) pe9_data;
 }
 
 
 void pe10_handler(void *data) {
-  PE10_CAN *pe10_can = (PE10_CAN *) data;
+  PE10_CAN *pe10_data = (PE10_CAN *) data;
 
-  (void) data;
+  (void) pe10_data;
 }
 
 
 void pe11_handler(void *data) {
-  PE11_CAN *pe11_can = (PE11_CAN *) data;
+  PE11_CAN *pe11_data = (PE11_CAN *) data;
 
-  (void) data;
+  (void) pe11_data;
 }
 
 
 void pe12_handler(void *data) {
-  PE12_CAN *pe12_can = (PE12_CAN *) data;
+  PE12_CAN *pe12_data = (PE12_CAN *) data;
 
-  (void) data;
+  (void) pe12_data;
 }
 
 
 void pe13_handler(void *data) {
-  PE13_CAN *pe13_can = (PE13_CAN *) data;
+  PE13_CAN *pe13_data = (PE13_CAN *) data;
 
-  (void) data;
+  (void) pe13_data;
 }
 
 
 void pe14_handler(void *data) {
-  PE14_CAN *pe14_can = (PE14_CAN *) data;
+  PE14_CAN *pe14_data = (PE14_CAN *) data;
 
-  (void) data;
+  (void) pe14_data;
 }
 
 
 void pe15_handler(void *data) {
-  PE15_CAN *pe15_can = (PE15_CAN *) data;
+  PE15_CAN *pe15_data = (PE15_CAN *) data;
 
-  (void) data;
+  (void) pe15_data;
 }
 
 
 void pe16_handler(void *data) {
-  PE16_CAN *pe16_can = (PE16_CAN *) data;
+  PE16_CAN *pe16_data = (PE16_CAN *) data;
 
   (void) data;
 }
