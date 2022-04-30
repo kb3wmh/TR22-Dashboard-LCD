@@ -25,10 +25,6 @@ bool init_display() {
   return true;
 }
 
-int get_page() {
-  int page = genieReadObj(GENIE_OBJ_FORM, 
-}
-
 void set_rpm(uint16_t rpm) {
   genieWriteObj(GENIE_OBJ_LED_DIGITS, RPM_DIGITS, rpm);
 }
