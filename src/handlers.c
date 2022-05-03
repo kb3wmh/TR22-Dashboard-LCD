@@ -171,5 +171,5 @@ void pe15_handler(void *data) {
 void pe16_handler(void *data) {
   PE16_CAN *pe16_data = (PE16_CAN *) data;
 
-  (void) data;
+  (void) pe16_data;
 }

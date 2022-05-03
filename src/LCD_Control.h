@@ -33,7 +33,7 @@
 #define TACH_MAX 100
 #define TACH_MIN 0
 #define BLINK_RATE 500
-#define TACH_RPM_FILTER 250
+#define TACH_RPM_FILTER 125
 #define RPM_DISPLAY_ROUND 50
 
 // LCD Control Functions

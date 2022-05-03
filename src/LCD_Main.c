@@ -18,7 +18,7 @@ void setup() {
 void loop() {
   cframe frame;
 
-  printf("Test\n");
+  printf("Terps Racing Dashboard 2022\n");
   
   for (;;) {
     if (receive_messages(&frame) != 0) {
