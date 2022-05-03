@@ -497,6 +497,386 @@ WinButton
     OnTouchPressed               ''
     OnTouchReleased              ''
 end
+StaticText
+    Name                         Statictext8
+    Alias                        Statictext8
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      RPM
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       30
+    Left                         16
+    Top                          336
+    Transparent                  Yes
+    Width                        80
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext9
+    Alias                        Statictext9
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      'TPS %'
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       30
+    Left                         10
+    Top                          150
+    Transparent                  Yes
+    Width                        80
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext10
+    Alias                        Statictext10
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      'Inj ms'
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       30
+    Left                         16
+    Top                          72
+    Transparent                  Yes
+    Width                        80
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext11
+    Alias                        Statictext11
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      'Ig. Angle'
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       30
+    Left                         12
+    Top                          256
+    Transparent                  Yes
+    Width                        80
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext12
+    Alias                        Statictext12
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      'MAP PSI'
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       30
+    Left                         156
+    Top                          72
+    Transparent                  Yes
+    Width                        90
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext13
+    Alias                        Statictext13
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      Lambda
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       30
+    Left                         130
+    Top                          160
+    Transparent                  Yes
+    Width                        90
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext14
+    Alias                        Statictext14
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      Volts
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       30
+    Left                         130
+    Top                          248
+    Transparent                  Yes
+    Width                        90
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext15
+    Alias                        Statictext15
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      'Air Temp'
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       30
+    Left                         130
+    Top                          336
+    Transparent                  Yes
+    Width                        90
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext16
+    Alias                        Statictext16
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      'H2O Temp'
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       30
+    Left                         312
+    Top                          72
+    Transparent                  Yes
+    Width                        100
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext17
+    Alias                        Statictext17
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      'Oil Temp'
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       30
+    Left                         250
+    Top                          160
+    Transparent                  Yes
+    Width                        100
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext18
+    Alias                        Statictext18
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      'Oil Press'
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       30
+    Left                         250
+    Top                          248
+    Transparent                  Yes
+    Width                        100
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext19
+    Alias                        Statictext19
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      'F Cmp Acc'
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       30
+    Left                         250
+    Top                          336
+    Transparent                  Yes
+    Width                        100
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext20
+    Alias                        Statictext20
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      'F Cmp Start'
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       30
+    Left                         478
+    Top                          72
+    Transparent                  Yes
+    Width                        105
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext21
+    Alias                        Statictext21
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      'F Cmp Tmp'
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       30
+    Left                         380
+    Top                          160
+    Transparent                  Yes
+    Width                        105
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext22
+    Alias                        Statictext22
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      'F Cmp MAP'
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       30
+    Left                         380
+    Top                          248
+    Transparent                  Yes
+    Width                        105
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext23
+    Alias                        Statictext23
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      'I Cmp Temp'
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       44
+    Left                         384
+    Top                          336
+    Transparent                  Yes
+    Width                        105
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext24
+    Alias                        Statictext24
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      'I Cmp MAP'
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       22
+    Left                         650
+    Top                          72
+    Transparent                  Yes
+    Width                        98
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext25
+    Alias                        Statictext25
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      'I Cmp MAP'
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       22
+    Left                         650
+    Top                          160
+    Transparent                  Yes
+    Width                        98
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext26
+    Alias                        Statictext26
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      Speed
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       22
+    Left                         650
+    Top                          248
+    Transparent                  Yes
+    Width                        57
+    WordWrap                     Yes
+end
+StaticText
+    Name                         Statictext27
+    Alias                        Statictext27
+    Alignment                    Left
+    AutoSize                     Yes
+    Caption                      Slip
+    Color                        BLACK
+    Font.Color                   clWhite
+    Font.Effects                 []
+    Font.Name                    Arial
+    Font.Size                    14
+    Font.Style                   []
+    Height                       22
+    Left                         650
+    Top                          336
+    Transparent                  Yes
+    Width                        32
+    WordWrap                     Yes
+end
 Form
     Name                         Form2
     Alias                        Form2
@@ -545,6 +925,23 @@ Image
     Source.Width                 288
     Top                          110
     Width                        288
+    OnTouchMoving                ''
+    OnTouchPressed               ''
+    OnTouchReleased              ''
+end
+Form
+    Name                         Form3
+    Alias                        Form3
+    Bgtype                       Color
+    Color                        BLACK
+    Image                        (None)
+    Source.Height                0
+    Source.Left                  0
+    Source.Top                   0
+    Source.Width                 0
+    OnActivate                   ''
+    OnCreate                     ''
+    OnRepeat                     ''
     OnTouchMoving                ''
     OnTouchPressed               ''
     OnTouchReleased              ''
