@@ -56,6 +56,8 @@ void set_TPS(uint16_t tps);
 void set_gear(uint8_t gear);
 void set_oil_warn(bool status);
 void set_slip(bool status);
+void set_diagnostics_digits(int field, int value);
+
 display_page_t get_page();
 
 #endif

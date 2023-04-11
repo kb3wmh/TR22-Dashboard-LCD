@@ -146,6 +146,10 @@ display_page_t get_page() {
   return page;
 }
 
+void set_diagnostics_digits(int field, int value) {
+  genieWriteObj(GENIE_OBJ_LED_DIGITS, field, value);
+}
+
 /* int main() { */
 /*   // Try to initialize display, quit if error */
 /*   printf("Starting\n"); */
