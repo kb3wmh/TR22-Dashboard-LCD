@@ -125,6 +125,27 @@ void set_slip(bool status) {
   genieWriteObj(GENIE_OBJ_USER_LED, SLIP_LED, status);
 }
 
+// Determines if display is in normal mode, diagnostics mode, or a non-interactive mode
+display_page_t get_page() {
+  display_page_t page;
+
+  int page_reply = genieReadObj(GENIE_OBJ_FORM, 0);
+
+  if (page_reply == DEFAULT_PAGE) {
+    page = NORMAL_PAGE;
+  }
+
+  else if (page_reply == DIAG_PAGE) {
+    page = DIAGNOSTICS_PAGE;
+  }
+
+  else {
+    page = NON_DISPLAY_PAGE;
+  }
+
+  return page;
+}
+
 /* int main() { */
 /*   // Try to initialize display, quit if error */
 /*   printf("Starting\n"); */

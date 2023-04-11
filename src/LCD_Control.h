@@ -36,6 +36,14 @@
 #define TACH_RPM_FILTER 125
 #define RPM_DISPLAY_ROUND 50
 
+// LCD Type Definitions
+
+typedef enum {
+    NORMAL_PAGE,
+    DIAGNOSTICS_PAGE,
+    NON_DISPLAY_PAGE
+} display_page_t;
+
 // LCD Control Functions
 bool init_display();
 void set_rpm(uint16_t rpm);
@@ -48,5 +56,6 @@ void set_TPS(uint16_t tps);
 void set_gear(uint8_t gear);
 void set_oil_warn(bool status);
 void set_slip(bool status);
+display_page_t get_page();
 
 #endif
