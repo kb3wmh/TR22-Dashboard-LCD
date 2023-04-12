@@ -3,7 +3,7 @@
 
 #include <linux/can.h>
 #include "PE3_CAN.h"
-#include "LCD_control.h"
+#include "LCD_Control.h"
 
 void process_can_frame(struct can_frame *frame);
 
