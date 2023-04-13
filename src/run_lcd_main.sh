@@ -7,7 +7,7 @@ LCD_MAIN=$SCRIPTPATH"/LCD_Main"
 
 if [ -f $LCD_MAIN ]
 then
-    nohup $LCD_MAIN &> /tmp/lcd.log &
+    nohup $LCD_MAIN &> /var/tmp/lcd.log &
 
 else
     echo "File: "$LCD_MAIN" does not exist. Did you compile the program?"
